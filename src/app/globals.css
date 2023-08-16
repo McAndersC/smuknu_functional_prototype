@@ -34,6 +34,10 @@ a {
   text-decoration: none;
 }
 
+.headline {
+  color : red;
+  font-weight: 700;
+}
 
 
 @media (prefers-color-scheme: dark) {
