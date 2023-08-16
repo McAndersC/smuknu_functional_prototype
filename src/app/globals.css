@@ -27,6 +27,17 @@ body {
 
 }
 
+.active {
+  color: red;
+}
+
+.slim {
+  font-weight: 100;
+}
+
+.inactive {
+  color: blue;
+}
 
 
 a {

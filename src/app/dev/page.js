@@ -17,6 +17,8 @@ export default function Dev() {
   const [productData, setProductData] = useState([]);
   const [questionsData, setQuestionsData] = useState([]);
 
+  const [active, setActive] = useState(false);
+
   const getProducts = async () => {
         
     fetch(`https://smuknu.webmcdm.dk/products`).then(res => res.json()).then(data => setProductData(data));
@@ -41,16 +43,18 @@ export default function Dev() {
     <div>
       Developer
 
-      <h1>Produkter</h1>
+      <h1 onClick={() => setActive(!active)}>Produkter</h1>
       {productData?.map((product) => (
         <PrintData key={product._id} data={product}/>
       ))}
         
       
-      <h1>Questions</h1>
+      <h1 className={`${'slim'} ${active ? 'active' : 'inactive'}`}>Questions</h1>
       {questionsData?.map((question) => (
         <PrintData key={question._id} data={question}/>
       ))}
+
+      {active ? <div>Active</div> : <div>Inactive</div>}
         
 
 
