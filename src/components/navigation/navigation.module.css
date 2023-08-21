@@ -1,5 +1,12 @@
+.navigation {
+    background-color: #ccc;
+    width: 100%;
+    height: 50px;
+}
+
 .navigationBar {
     display: none;
+
 }
 
 .styles.navigationBar {

@@ -1,6 +1,7 @@
 import Navigation from '@/components/navigation/navigation';
 import './globals.css'
 import { quickFont } from '@/utils/fonts';
+import Footer from '@/components/footer/footer';
 
 
 export const metadata = {
@@ -14,6 +15,7 @@ export default function RootLayout({ children }) {
       <body className={quickFont.className}>
         <Navigation />
         {children}
+        <Footer />
       </body>
     </html>
   )

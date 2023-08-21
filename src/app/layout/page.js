@@ -1,20 +1,21 @@
 import { quickFont } from '@/utils/fonts';
 import styles from './page.module.css';
 import { FaFacebook, FaInstagram } from 'react-icons/fa';
+import SubscribeForm from '@/components/subscribe/subscribeformular';
 
 
 export default function Layout() {
 
     return <div>
-        
-        
-
+    
         <h1 className={`${quickFont.className} ${styles.headline}`}>MEDLEM?</h1>
         <div>Standard Font</div>
 
         <FaFacebook className={styles.icon} />
         <FaInstagram className={styles.icon} />
         
+
+        <SubscribeForm></SubscribeForm>
     </div>
 
 }
