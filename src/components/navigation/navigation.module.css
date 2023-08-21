@@ -1,0 +1,7 @@
+.navigationBar {
+    display: none;
+}
+
+.styles.navigationBar {
+    display: block;
+}
