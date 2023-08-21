@@ -16,6 +16,12 @@ const SubscribeForm = () => {
                     <input />
                 </label>
 
+                
+                <label>Message:
+                    <textarea />
+                </label>
+
+                <button>Send</button>
             </fieldset>
         </form>
     )

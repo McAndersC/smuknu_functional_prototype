@@ -12,7 +12,7 @@ const Navigation = () => {
         <button onClick={() => setIsOpen(!isOpen)}>Toggle</button>
         <div className={`${!isOpen ? styles.navigationBar : styles.navigationBarOpen}`}>
 
-            <Link href="/">Home</Link> | <Link href="/dev">Developer</Link> | <Link href="/layout">Layout</Link> | <Link href="/layout">    </Link>
+            <Link href="/">Home</Link> | <Link href="/dev">Developer</Link> | <Link href="/layout">Layout</Link> | <Link href="/bliv-medlem">Bliv Medlem </Link>
 
         </div>
         
