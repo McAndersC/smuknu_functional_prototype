@@ -3,7 +3,7 @@
 
 import Product from "@/components/product/product";
 import { useState, useEffect } from "react";
-
+import styles from './page.module.css';
 
 
 const PrintData = ({data}) => {
@@ -49,14 +49,14 @@ export default function Dev() {
 
       <h1 onClick={() => setActive(!active)}>Produkter</h1>
 
-
+      <div className={styles.products}>
       {productData?.map((product) => (
         <>
         {/* <PrintData key={product._id} data={product}/> */}
         <Product key={product._id} productData={product} />
         </>
       ))}
-        
+        </div>
       
       <h1 className={`${'slim'} ${active ? 'active' : 'inactive'}`}>Questions</h1>
       {questionsData?.map((question) => (
