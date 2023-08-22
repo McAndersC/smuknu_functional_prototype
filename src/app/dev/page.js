@@ -1,6 +1,10 @@
 "use client"
 
+
+import Product from "@/components/product/product";
 import { useState, useEffect } from "react";
+
+
 
 const PrintData = ({data}) => {
 
@@ -44,8 +48,13 @@ export default function Dev() {
       Developer
 
       <h1 onClick={() => setActive(!active)}>Produkter</h1>
+
+
       {productData?.map((product) => (
-        <PrintData key={product._id} data={product}/>
+        <>
+        {/* <PrintData key={product._id} data={product}/> */}
+        <Product key={product._id} productData={product} />
+        </>
       ))}
         
       

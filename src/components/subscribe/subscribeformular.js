@@ -13,7 +13,8 @@ const SubscribeForm = () => {
 
     return (
         <div>
-          {formSubmitted ? <SubscribeResponseView name={subscriberName} /> : <SubscribeFormView setFormSubmitted={setFormSubmitted} setSubscriberName={setSubscriberName}/>}
+          {formSubmitted ? <SubscribeResponseView name={subscriberName} /> :
+           <SubscribeFormView setFormSubmitted={setFormSubmitted} setSubscriberName={setSubscriberName}/>}
         </div>
     )
 

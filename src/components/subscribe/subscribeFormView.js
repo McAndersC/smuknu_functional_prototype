@@ -52,17 +52,17 @@ const SubscribeFormView = ({setFormSubmitted, setSubscriberName}) => {
 
                         <label>Navn
                             <input {...register("name")} className={errors.name?.message ? styles.formError : ''}/>
-                            {errors.name?.message && <p>{errors.name?.message}</p>}
+                            {/* {errors.name?.message && <p>{errors.name?.message}</p>} */}
                         </label>
 
                         <label>Email:
-                            <input {...register("email")}/>
-                            {errors.email?.message && <p>{errors.email?.message}</p>}
+                            <input {...register("email")}  className={errors.name?.message ? styles.formError : ''}/>
+                            {/* {errors.email?.message && <p>{errors.email?.message}</p>} */}
                         </label>
 
                         <label>Message:
-                            <textarea {...register("message")}/>
-                            {errors.message?.message && <p>{errors.message?.message}</p>}
+                            <textarea {...register("message")}  className={errors.name?.message ? styles.formError : ''}/>
+                            {/* {errors.message?.message && <p>{errors.message?.message}</p>} */}
                         </label>
 
                         <button>Send</button>
