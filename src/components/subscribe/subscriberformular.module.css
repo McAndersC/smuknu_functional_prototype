@@ -9,6 +9,13 @@
   
 .form input {
     margin: 0 10px;    
+    border-radius: 20px;
+    padding: 10px;
+}
+.form textarea {
+    margin: 0 10px;    
+    border-radius: 20px;
+    padding: 10px;
 }
 
 .form button {
@@ -25,4 +32,17 @@
     display: flex;
     flex-direction: column;
     gap: 20px;
+}
+
+.formError {
+    border-width: 2px;
+    border-style: solid;
+    border-color: red;
+
+}
+
+
+/* Response View */
+.responseView {
+    background-color: silver;
 }
