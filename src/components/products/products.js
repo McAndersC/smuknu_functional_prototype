@@ -24,8 +24,10 @@ const ProductHeader = ({text}) => {
 
 const Products = ({config}) => {
 
+    console.log('config', config)
+
     const [productData, setProductData] = useState([]);
-    const [recommended, setRecommeded] = useState(true);
+    const [recommended, setRecommeded] = useState(config?.recommended);
 
     const getProducts = async () => {
         

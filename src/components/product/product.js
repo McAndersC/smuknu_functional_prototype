@@ -12,7 +12,7 @@ const PercentBox = ({ percent }) => {
 
 
 const Product = ({product}) => {
-    console.log(product)
+ 
     return (
       <div className={styles.product}>
      

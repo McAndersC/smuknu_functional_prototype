@@ -1,13 +1,16 @@
 import Products from "@/components/products/products"
+import styles from './page.module.css'
 
-const Member = () => {
+const ProductsPage = () => {
 
-    return <div>
+    return <div className={styles.main}>
         
-        <Products config={{black: 'ALT ER', pink:'SKØNHED', recommended: false}}></Products>
+        <Products config={{black: 'RECOMEND', pink:'PRODUCTS', recommended: true}}></Products>
+        <Products config={{black: 'ALL', pink:'PRODUCTS', recommended: false}}></Products>
+
 
     </div>
 
 }
 
-export default Member
+export default ProductsPage
