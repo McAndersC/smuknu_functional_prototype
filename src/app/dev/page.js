@@ -53,7 +53,7 @@ export default function Dev() {
       {productData?.map((product) => (
         <>
         {/* <PrintData key={product._id} data={product}/> */}
-        <Product key={product._id} productData={product} />
+        <Product key={product._id} product={product} />
         </>
       ))}
         </div>

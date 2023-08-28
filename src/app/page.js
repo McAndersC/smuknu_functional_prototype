@@ -1,19 +1,12 @@
 "use client"
-import Image from 'next/image'
+import Products from '@/components/products/products'
 import styles from './page.module.css'
 
-let user = {
-  'last-name' : 'Doe',
-  'firstname': 'John',
-}
-
-
-console.log('HELLO SERVER ER DU DER?', user.firstname, user['last-name'])
 export default function Home() {
   return (
     <main className={styles.main}>
-      Applikation
-      <div className={`${styles.box} ${styles['box-red']}`}>BOX</div>
+      {/* <div className={`${styles.box} ${styles['box-red']}`}>BOX</div> */}
+      <Products config={{black: 'UDVALGT', pink:'SKØNHED!', recommended: true}}></Products>
     </main>
   )
 }

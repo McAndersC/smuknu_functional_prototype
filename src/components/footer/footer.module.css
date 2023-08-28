@@ -1,4 +1,57 @@
 .footer {
-    background-color: gray;
-    height: 143px
+    background-color: var(--color-grey);
+    height: 243px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.social {
+    margin-top: 37px;
+    display: flex;
+}
+.address {
+    margin: 37px 0;
+}
+.address a{
+
+    display: block;
+    text-align: center;
+    font-size: 14px;
+    margin: 5px 0;
+    
+}
+
+.address a:hover{
+    
+    color: var(--color-pink);
+    
+}
+
+.icon {
+    color: #fff;
+    font-size: 40px;
+    margin: 0 10px;
+}
+
+.icon:hover{
+    
+    color: var(--color-pink);
+    cursor: pointer;
+    
+}
+
+.black {
+    color: #000;
+}
+
+.white {
+    color: #fff;
+    
+}
+
+@media (min-width: 728px) {
+    .icon {
+        font-size: 80px;
+    }
 }
