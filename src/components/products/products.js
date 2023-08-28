@@ -25,7 +25,7 @@ const ProductHeader = ({text}) => {
 const Products = ({config}) => {
 
     const [productData, setProductData] = useState([]);
-    const [recommended, setRecommeded] = useState(config?.recommended);
+    const [recommended, setRecommeded] = useState(true);
 
     const getProducts = async () => {
         
@@ -38,7 +38,7 @@ const Products = ({config}) => {
     }
 
     const showRecommendedProducts = () => {
-        return productData.length !== 0 ? productData.filter((p) => p.recommended).map((product, index) => <Product key={index} product={product}></Product>) : null
+        return productData.length !== 0 ? productData.filter((p) => p.recommended === true).map((product, index) => <Product key={index} product={product}></Product>) : null
     }
 
     useEffect(() => {
@@ -53,8 +53,6 @@ const Products = ({config}) => {
 
             <div className={styles.productsList}>
                 { recommended ? showRecommendedProducts() : showAllProducts() }
-                {/* {productData.length !== 0 ? productData.map((product, index) => <Product key={index} product={product}></Product>) : null} */}
-                {/* {productData.length !== 0 ? productData.filter((p) => p.recommended).map((product, index) => <Product key={index} product={product}></Product>) : null} */}
             </div>
      
 
