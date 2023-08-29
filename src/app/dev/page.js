@@ -1,6 +1,5 @@
 "use client"
 
-
 import Product from "@/components/product/product";
 import { useState, useEffect } from "react";
 import styles from './page.module.css';
@@ -34,7 +33,6 @@ export default function Dev() {
     fetch(`https://smuknu.webmcdm.dk/questions`).then(res => res.json()).then(data => setQuestionsData(data));
         
   }
-
 
   useEffect(() => {
 

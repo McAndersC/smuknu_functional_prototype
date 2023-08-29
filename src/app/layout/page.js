@@ -3,6 +3,7 @@ import styles from './page.module.css';
 import { FaFacebook, FaInstagram } from 'react-icons/fa';
 import SubscribeForm from '@/components/subscribe/subscribeformular';
 import Product from '@/components/product/product';
+import Accordians from '@/components/questions/accordians';
 
 let productData = {
     "_id": "6418576e26d8eda8bbe16729",
@@ -22,6 +23,8 @@ export default function Layout() {
     
         <h1 className={`${quickFont.className} ${styles.headline}`}>MEDLEM?</h1>
         <div>Standard Font</div>
+
+        <Accordians></Accordians>
 
         <FaFacebook className={styles.icon} />
         <FaInstagram className={styles.icon} />
