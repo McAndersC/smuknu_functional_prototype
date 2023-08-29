@@ -76,7 +76,7 @@ const Navigation = () => {
             <div className={styles.actions}>
                 
                 <div onClick={() => setIsBasketOpen(!isBasketOpen)}>
-                    {basketContext?.length !== 0 ? <div>{basketContext.length}</div> : null}
+                    {basketContext?.length !== 0 ? <div>{basketContext?.length}</div> : null}
                     <FaShoppingBag className={`${styles.bag} ${basketContext ? styles.active : ''} `} ></FaShoppingBag>
                 </div>
                 <div onClick={() => setIsOpen(!isOpen)}>
