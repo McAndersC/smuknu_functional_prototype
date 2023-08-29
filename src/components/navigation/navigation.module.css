@@ -18,15 +18,25 @@
     box-shadow: 0px 3px 6px #00000029;
 }
 
+.actions {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 60px;
+}
+
+
 .navigation .bars {
     color: var(--color-pink);
     width: 50px;
     height: 30px;
+    margin-top: -4px;
 }
 
-.navigationBar {
-    /* display: none; */
-   
+.navigation .bag {
+    color: var(--color-pink);
+    width: 50px;
+    height: 30px;
 }
 
 .navigationPane {
@@ -66,17 +76,39 @@
     top: 0;
 }
 
-
-.styles.navigationBar {
-    display: block;
-}
-
 .logo {
     left: 20px;
     position: relative;
 }
 
+
 .actions {
     position: relative;
     right: 20px;
+}
+
+
+/* BASKET */
+.basketPane {
+    position: absolute;
+    background-color: green;
+    color: #fff;
+    padding: 20px;
+    border-radius: 0 0 16px 16px;
+    transition: top 0.1s ease-in-out;
+    overflow: hidden;
+    top: -500px;
+    right : 0;
+    left : 0;
+    z-index: 10;
+    box-shadow: 0px 3px 6px #00000029;
+
+}
+
+.basketPaneOpen {
+    top: 80px;
+}
+
+.basketPaneClosed {
+    top: -500px;
 }

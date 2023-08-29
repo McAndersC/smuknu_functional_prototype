@@ -31,7 +31,7 @@ export default function Layout() {
 
         <hr></hr>
 
-        <Product productData={productData}></Product>
+        
     </div>
 
 }

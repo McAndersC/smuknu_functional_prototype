@@ -1,0 +1,17 @@
+
+.productsHeader {
+
+    margin: 40px 0;
+}
+
+.productsHeader h2{
+    
+    text-align: center;
+    font-weight: 700;
+    margin: 0;
+    font-size: clamp(1rem, 15vw, 5rem);
+}
+
+.productsHeaderSub {
+    color: var(--color-pink);
+}

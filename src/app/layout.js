@@ -2,6 +2,7 @@ import Navigation from '@/components/navigation/navigation';
 import './globals.css'
 import { quickFont } from '@/utils/fonts';
 import Footer from '@/components/footer/footer';
+import { BasketContextProvider } from '@/context/basket';
 
 
 export const metadata = {
@@ -13,9 +14,11 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <body className={quickFont.className}>
-        <Navigation />
-          {children}
-        <Footer />
+        <BasketContextProvider>
+          <Navigation />
+            {children}
+          <Footer />
+        </BasketContextProvider>
       </body>
     </html>
   )
