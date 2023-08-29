@@ -6,10 +6,10 @@ const BasketContext = createContext({})
 
 export const BasketContextProvider = ({ children }) => {
     
-    const [basketActive, setBasketActive] = useState(false);
+    const [basketContext, setBasketContext] = useState([]);
 
     return (
-        <BasketContext.Provider value={{ basketActive, setBasketActive }}>
+        <BasketContext.Provider value={{ basketContext, setBasketContext }}>
             {children}
         </BasketContext.Provider>
     )

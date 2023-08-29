@@ -1,33 +1,26 @@
 'use client'
 import { useBasketContext } from '@/context/basket';
 import Product from '../product/product';
-import { addToBasket, removeFromBasket, getBasket } from '../services/basketservice';
+import { addToBasket, removeFromBasket } from '../services/basketservice';
 import styles from './products.module.css';
 import { useState, useEffect } from "react";
 import Header from '../common/header';
-
-// const ProductHeader = ({text}) => {
-
-//     return <div className={styles.productsHeader}>
-//         <h2>{text.black}<br/><span className={styles.productsHeaderSub}>{text.pink}</span></h2>
-//     </div>
-
-// }
 
 
 const Products = ({headline, recommend}) => {
 
     const [productData, setProductData] = useState([]);
     const [recommended, setRecommeded] = useState(recommend);
-    const { basketActive, setBasketActive} = useBasketContext();
+    const { basketActive, setBasketContext} = useBasketContext();
 
-    const addProductToBasket = (id) => {
+    const addProductToBasket = async (id) => {
 
-        console.log('KØB', id)
+        console.log('KØB', id);
+
         addToBasket(id).then( (products) => {
     
             products = JSON.parse(products);
-            products.length !== 0 ? setBasketActive(true) : setBasketActive(false);
+            products.length !== 0 ? setBasketContext(products) : setBasketContext(products);
 
         })
     
@@ -37,22 +30,12 @@ const Products = ({headline, recommend}) => {
     
         removeFromBasket(id).then( (products) => {
     
-            products.length !== 0 ? setBasketActive(true) :  setBasketActive(false);
+            products.length !== 0 ? setBasketContext(products) : setBasketContext(products);
 
         })
     
     }
 
-    const checkBasket = async () => {
-            
-        let basket = await getBasket();
-
-        if(basket !== null) {
-            setBasketActive(true);
-        } else {
-            setBasketActive(false);
-        }
-    }
 
     const getProducts = async () => {
         
@@ -83,15 +66,13 @@ const Products = ({headline, recommend}) => {
     useEffect(() => {
 
         getProducts();
-        // checkBasket();
     
     }, []);
 
     return <div className={styles.products}>
      
         <Header text={headline}></Header>
-        {/* <h1>{basketActive.toString()} {recommended.toString()}</h1> */}
-    
+
         <div className={styles.productsList}>
             { recommended ? showRecommendedProducts() : showAllProducts() }
         </div>

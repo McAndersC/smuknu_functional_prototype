@@ -39,6 +39,10 @@
     height: 30px;
 }
 
+.navigation .bag.active {
+    color: red;
+}
+
 .navigationPane {
     
     background-color: #000;
