@@ -2,10 +2,13 @@ import { yupResolver } from "@hookform/resolvers/yup";
 import * as Yup from "yup";
 import { useForm } from "react-hook-form";
 import styles from './subscriberformular.module.css';
+import { quickFont } from '@/utils/fonts';
+
 
 const SubscribeFormView = ({setFormSubmitted, setSubscriberName}) => {
+
     const validationSchema = Yup.object().shape({
-        name: Yup.string().required(),
+
         email: Yup.string().required().email('Skal være en rigit email'),
         message: Yup.string().required(),
     });
@@ -47,26 +50,26 @@ const SubscribeFormView = ({setFormSubmitted, setSubscriberName}) => {
 
     return (
         <form className={styles.form} onSubmit={handleSubmit(onSubmit)}>
-                    <fieldset>
-                        <legend>Subscribers</legend>
+                
+                     
 
-                        <label>Navn
-                            <input {...register("name")} className={errors.name?.message ? styles.formError : ''}/>
+                        <label>Fulde Navn
+                            <input {...register("name")} className={errors.name?.message ? styles.formError : ''} />
                             {/* {errors.name?.message && <p>{errors.name?.message}</p>} */}
                         </label>
 
-                        <label>Email:
+                        <label>E-mail:
                             <input {...register("email")}  className={errors.name?.message ? styles.formError : ''}/>
                             {/* {errors.email?.message && <p>{errors.email?.message}</p>} */}
                         </label>
 
-                        <label>Message:
+                        <label>Ris og/eller ros:
                             <textarea {...register("message")}  className={errors.name?.message ? styles.formError : ''}/>
                             {/* {errors.message?.message && <p>{errors.message?.message}</p>} */}
                         </label>
 
-                        <button>Send</button>
-                    </fieldset>
+                        <button className={quickFont.className}>Opret</button>
+                
                 </form>
     )
 }

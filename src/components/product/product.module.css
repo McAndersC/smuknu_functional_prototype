@@ -68,6 +68,6 @@
 
 @media (min-width: 728px) {
     .product {
-        width: calc(50% - 10px);
+        width: calc(50% - 15px);
     }
 }

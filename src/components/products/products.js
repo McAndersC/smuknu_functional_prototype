@@ -4,7 +4,8 @@ import Product from '../product/product';
 import { addToBasket, removeFromBasket } from '../services/basketservice';
 import styles from './products.module.css';
 import { useState, useEffect } from "react";
-import Header from '../common/header';
+import Header from '../common/header/header';
+import { getAllProducts } from '../services/dataservice';
 
 
 const Products = ({headline, recommend}) => {
@@ -39,7 +40,7 @@ const Products = ({headline, recommend}) => {
 
     const getProducts = async () => {
         
-        fetch(`https://smuknu.webmcdm.dk/products`).then(res => res.json()).then(data => setProductData(data));
+        getAllProducts().then(data => setProductData(data));
             
     }
 
@@ -56,10 +57,10 @@ const Products = ({headline, recommend}) => {
 
     const showRecommendedProducts = () => {
         return productData.length !== 0 ? productData.filter((p) => p.recommended).map((product, index) => <Product 
-        key={index} 
-        product={product} 
-        addToBasket={addProductToBasket} 
-        removeFromBasket={removeProductToBasket}>
+            key={index} 
+            product={product} 
+            addToBasket={addProductToBasket} 
+            removeFromBasket={removeProductToBasket}>
         </Product>) : null;
     }
 
@@ -69,9 +70,18 @@ const Products = ({headline, recommend}) => {
     
     }, []);
 
-    return <div className={styles.products}>
+    return <div className={styles.products} id="selected" >
      
-        <Header text={headline}></Header>
+        <Header text={{
+            one : {
+                text : 'UDVALGT',
+                color : '#000'
+            },
+            two : {
+                text : 'SKØNHED',
+                color : '#fa96aa'
+            }
+        }}></Header>
 
         <div className={styles.productsList}>
             { recommended ? showRecommendedProducts() : showAllProducts() }
