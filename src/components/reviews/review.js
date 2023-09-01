@@ -3,12 +3,18 @@ import styles from './reviews.module.css';
 
 const Review = ({review}) => {
     return <div className={styles.review}>
+
         <div className={styles.image}>
+
             <Image src={review.image} alt={review.name} width={150} height={150}/>
+
             <div className={`${styles.author} ${styles.md}`}>
-            <h3 className={styles.headline}>{review.name}</h3>
-            <span>{review.byline}</span>
-        </div>
+
+                <h3 className={styles.headline}>{review.name}</h3>
+                <span>{review.byline}</span>
+                
+            </div>
+
         </div>
         <div className={styles.body} dangerouslySetInnerHTML={{__html : review.description}}></div>
 

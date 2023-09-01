@@ -1,12 +1,12 @@
 'use client'
-import Basket from "./basket";
-import styles from "./basket.module.css";
+import BasketList from './basketList';
+import styles from './basket.module.css';
 
-import { useState, useEffect } from "react";
+import { useState, useEffect } from 'react';
 import { useBasketContext } from '@/context/basket';
-import { getBasket } from "@/components/services/basketservice";
+import { getBasket } from '@/services/basketservice';
 
-const BasketPane = () => {
+const Basket = () => {
 
     const [basket, setBasket] = useState([]);
     const {basketContext, setBasketContext} = useBasketContext();
@@ -53,10 +53,10 @@ const BasketPane = () => {
 
     return  <>
 
-        {basket.length !== 0 ? <Basket basket={basket}></Basket> : <div className={styles.empty}>Der er ingen varer i kurven</div>} 
+        {basket.length !== 0 ? <BasketList basket={basket}></BasketList> : <div className={styles.empty}>Der er ingen varer i kurven</div>} 
 
     </> 
 
 }
 
-export default BasketPane;
+export default Basket;

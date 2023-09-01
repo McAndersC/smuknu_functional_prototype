@@ -1,11 +1,11 @@
 'use client'
 import { useBasketContext } from '@/context/basket';
 import Product from '../product/product';
-import { addToBasket, removeFromBasket } from '../services/basketservice';
+import { addToBasket, removeFromBasket } from '../../services/basketservice';
 import styles from './products.module.css';
-import { useState, useEffect } from "react";
+import { useState, useEffect } from 'react';
 import Header from '../common/header/header';
-import { getAllProducts } from '../services/dataservice';
+import { getAllProducts } from '../../services/dataservice';
 
 
 const Products = ({headline, recommend}) => {
@@ -83,7 +83,7 @@ const Products = ({headline, recommend}) => {
             }
         }}></Header>
 
-        <div className={styles.productsList}>
+        <div className={styles.list}>
             { recommended ? showRecommendedProducts() : showAllProducts() }
         </div>
 

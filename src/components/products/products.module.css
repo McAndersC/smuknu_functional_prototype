@@ -1,13 +1,21 @@
+/* 
+
+    Products Component Styling
+
+
+*/
+
 .products {
 
     width: 100%;
     height: 100%;
     scroll-margin-top: 80px;
     padding : 0 20px;
+    padding-bottom: 40px;
     
 }
 
-.productsList {
+.list {
     
     display: flex;
     flex-direction: column;
@@ -15,25 +23,15 @@
     gap: 30px;
     flex: 1;
 }
-.productsHeader {
 
-    margin: 40px 0;
-}
+/*  
 
-.productsHeader h2{
-    
-    text-align: center;
-    font-weight: 700;
-    margin: 0;
-    font-size: clamp(1rem, 15vw, 5rem);
-}
+    Media Queries
 
-.productsHeaderSub {
-    color: var(--color-pink);
-}
+*/
 
 @media (min-width: 728px) {
-    .productsList {
+    .list {
         flex-direction: row;
         flex-wrap: wrap;
     }

@@ -1,3 +1,9 @@
+/* 
+
+    Footer Component Styling
+
+*/
+
 .footer {
     background-color: var(--color-grey);
     height: 243px;
@@ -6,13 +12,42 @@
     align-items: center;
 }
 
+/* 
+
+    Socials
+
+*/
 .social {
+
     margin-top: 37px;
     display: flex;
+
 }
+
+.icon {
+    color: #fff;
+    font-size: clamp(2.5rem, 4.5vw, 4rem);
+    margin: 0 10px;
+}
+
+.icon:hover{
+    
+    color: var(--color-pink);
+    cursor: pointer;
+    
+}
+
+/* 
+
+    Adress
+
+*/
 .address {
+
     margin: 37px 0;
+
 }
+
 .address a{
 
     display: block;
@@ -26,32 +61,4 @@
     
     color: var(--color-pink);
     
-}
-
-.icon {
-    color: #fff;
-    font-size: 40px;
-    margin: 0 10px;
-}
-
-.icon:hover{
-    
-    color: var(--color-pink);
-    cursor: pointer;
-    
-}
-
-.black {
-    color: #000;
-}
-
-.white {
-    color: #fff;
-    
-}
-
-@media (min-width: 728px) {
-    .icon {
-        font-size: 80px;
-    }
 }

@@ -1,15 +1,24 @@
+/* 
+
+    Reviews Component Styling
+
+*/
+
 .reviews {
    
-  padding: 0 20px;
-}
-
-.reviewsList {
+  padding: 0 var(--main-gutter);
 
 }
 
 .headline {
     font-size: 18px;
 }
+
+/* 
+
+    Review Styling
+
+*/
 
 .review {
     display: flex;
@@ -21,9 +30,25 @@
     padding-bottom: 20px;
 }
 
+.review img {
+    border-radius: 100px;
+    border: 10px solid var(--color-pink);
+    margin: 20px 0;
+}
+
+.author {
+    text-align: center;
+}
+
 .body {
     text-align: center;
 }
+
+/* 
+
+    Hiding and showing author
+
+*/
 
 .md {
     display: none;
@@ -33,19 +58,17 @@
     display: block;
 }
 
-.author {
-    text-align: center;
-}
 
-.review img {
-    border-radius: 100px;
-    border: 10px solid var(--color-pink);
-    margin: 20px 0;
-}
+/* 
 
+    Media Queries
+
+*/
 
 @media (min-width: 728px) {
+
     .review {
+
         display: flex;
         flex-direction: row;
         border-bottom: 0px solid var(--color-pink);
@@ -57,7 +80,6 @@
         margin-top: 50px;
         text-align: left;
     }
-
 
     .review:nth-child(odd) {
         flex-direction: row-reverse;

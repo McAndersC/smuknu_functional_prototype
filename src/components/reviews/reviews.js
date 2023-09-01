@@ -1,8 +1,8 @@
-import Header from "../common/header/header";
-import { getAllReviews } from "../services/dataservice";
-import Review from "./review";
+import Header from '../common/header/header';
+import { getAllReviews } from '../../services/dataservice';
+import Review from './review';
 import styles from './reviews.module.css';
-import { useState, useEffect } from "react";
+import { useState, useEffect } from 'react';
 
 
 const Reviews = () => {
@@ -35,9 +35,8 @@ const Reviews = () => {
 
     return <div className={styles.reviews}>
         <Header text={headline}></Header>
-        <div className={styles.reviewsList}>
-            
-        {reviewsData?.length !== 0 ? reviewsData.map((review, index) => <Review key={index} review={review}></Review>) : null}  
+        <div> 
+            {reviewsData?.length !== 0 ? reviewsData.map((review, index) => <Review key={index} review={review}></Review>) : null}  
         </div>
         
     </div>

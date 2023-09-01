@@ -1,7 +1,7 @@
-"use client"
+'use client'
 
-import Product from "@/components/product/product";
-import { useState, useEffect } from "react";
+import Product from '@/components/product/product';
+import { useState, useEffect } from 'react';
 import styles from './page.module.css';
 
 

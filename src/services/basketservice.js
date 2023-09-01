@@ -1,7 +1,7 @@
 // Her ligger vores funktioner til at håndtere kurven i localstorage
 const getBasket = async () => {
 
-    let basket = localStorage.getItem("basket");
+    let basket = localStorage.getItem('basket');
     console.log('GetBasket', basket);
     return JSON.parse(basket);
 
@@ -10,7 +10,7 @@ const getBasket = async () => {
 // Gemmer kurven i localstorage
 const saveBasket = async (basket) => {
 
-    localStorage.setItem("basket", JSON.stringify(basket));
+    localStorage.setItem('basket', JSON.stringify(basket));
 
 };
 
@@ -22,13 +22,22 @@ const removeFromBasket = async (id) => {
     if(basket !== null) {
         
         // Finder produktet i kurven
-        let productIndex = basket.findIndex((item) => item.id === id);
+        let product = basket.find((item) => item.id === id);
+        console.log('RemoveFromBasket', product);
+        if(product) {
 
-        if(productIndex !== -1) {
+            if(product.quantity !== 1) {
 
-            // Sletter produktet fra kurven
-            let deletedProduct = basket.splice(productIndex, 1);
+                // Fjerner fra Quantity
+                product.quantity = product.quantity - 1;
+                
+            } else {
 
+                let productIndex = basket.findIndex((item) => item.id === id);
+                // Sletter produktet fra kurven
+                let deletedProduct = basket.splice(productIndex, 1);
+            }
+        
             // Gemmer kurven i localstorage
             saveBasket(basket);
 
@@ -36,7 +45,7 @@ const removeFromBasket = async (id) => {
 
         } else {
 
-            return "No product found"
+            return basket
 
         } 
         

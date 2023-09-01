@@ -1,7 +1,6 @@
 'use client'
-import Header from "../common/header/header";
-import Accordian from "./accordian";
-import styles from './accordians.module.css';
+
+import Accordian from './accordian';
 import { useEffect, useState } from 'react';
 
 const Accordians = () => {
@@ -23,11 +22,11 @@ const Accordians = () => {
     return <div>
 
         {questionsData.map( (question) => {
+
             return <Accordian key={question._id} header={question.question} body={question.answer}></Accordian>
+            
         })}
         
-
-
     </div>
 
 };

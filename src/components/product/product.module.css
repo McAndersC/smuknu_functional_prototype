@@ -1,3 +1,9 @@
+/* 
+
+    Product Component Styling
+
+
+*/
 .product {
 
     background-color: white;
@@ -8,18 +14,22 @@
     box-shadow: 2px 2px 5px darkgray;
 }
 
-.imageContainer {
+/* 
+
+    Product Header Styling
+
+*/
+.header {
     position: relative;
 }
 
+/* 
 
+    Header Discount Box
 
-.productDescription {
+*/
 
-    padding : 20px;
-}
-
-.productDiscount {
+.discount {
     text-align: center;
     color: #fff;
     min-width: 100px;
@@ -37,37 +47,99 @@
     flex-direction: column;
 }
 
-.productDiscountText {
+.discountText {
     font-size: 18px;
     line-height: 18px;
     
 }
-.productDiscountPercent {
+
+.discountPercent {
     font-size: 22px;
     font-weight: 700;
     line-height: 22px;
 }
-.productTitle {
-    font-size: 22px;
-  
-}
 
-.productPrice {
 
-    font-size: 18px;
-    font-weight: 700;
-}
 
+/* 
+
+    Product Image Styling
+
+*/
 .product img{
     border-radius: 20px 20px 0 0;
     width: 100%;
     height: 100%;
     border-bottom: 3px solid var(--color-pink);
+    object-fit: cover;
+}
+
+
+
+/* 
+
+    Product Body Styling "Footer"
+
+*/
+.body {
+
+    padding : 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    max-height: 120px;
+}
+
+.title {
+    font-size: 22px;
+    min-height: 55px;
   
 }
 
+.footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 20px 0 10px 0;
+}
+
+.price {
+
+    font-size: 18px;
+    font-weight: 700;
+}
+
+
+.btn {
+
+    background-color: var(--color-black);
+    border : 0;
+    padding: 6px 10px;
+    border-radius: 40px;
+    font-size: 16px;
+    line-height: 12px;
+    color: #fff;
+    margin-left : 5px;
+}
+
+
+/*  
+
+    Media Queries
+
+*/
+
 @media (min-width: 728px) {
     .product {
-        width: calc(50% - 15px);
+      
+        width: calc(50% - 20px);
+    }
+}
+
+
+@media (min-width: 1024px) {
+    .product {
+      
+        width: calc(25%);
     }
 }

@@ -1,3 +1,10 @@
+
+/* 
+
+    "Are you a member" Component
+
+*/
+
 .member {
 
     background-color: var(--color-flat);
@@ -7,12 +14,24 @@
     padding: 20px;
 }
 
-.headline
+.member .teaser {
+    text-align: center;
+    padding: 20px;
+}
+
+.member .teaser p {
+    font-size: 18px;
+    font-weight: 700;
+    padding: 40px 0;
+}
+
+.member .teaser .headline
 {
     font-size: 54px;
     font-weight: 700;
 }
-.btn {
+
+.member .teaser .btn {
 
     background-color: var(--color-pink);
     border : 0;
@@ -22,26 +41,23 @@
     display: block;
     color: #fff;
 }
-.teaser {
-    text-align: center;
-    padding: 20px;
-}
 
-.teaser p{
-    font-size: 18px;
-    font-weight: 700;
-    padding: 40px 0;
-}
-
-
-.reviews {
+.member .reviews {
 
     display: none;
+
 }
+
+
+
+
+
+
+
 
 
 @media (min-width: 728px) {
-    .reviews {
+    .member .reviews {
         display: grid;
         grid-template-columns: 1fr 1fr;
         gap: 30px;

@@ -1,7 +1,8 @@
-import BasketItem from "./basketItem";
-import styles from "./basket.module.css";
+import BasketItem from './basketItem';
+import styles from './basket.module.css';
+import Link from 'next/link';
 
-const Basket = ({basket}) => {
+const BasketList = ({basket}) => {
 
     const total = () => {
    
@@ -13,10 +14,12 @@ const Basket = ({basket}) => {
         
         {basket?.map((product) => <BasketItem key={product._id} item={product}></BasketItem>)}
         <hr></hr>
+        <div className={styles.result}>fragt, moms, pis og papir 0 kr.</div>
         <div className={styles.result}>ialt: {total()} kr.</div>
-
+       
     </div>
+    
 
 }
 
-export default Basket;
+export default BasketList;

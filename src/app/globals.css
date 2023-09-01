@@ -1,13 +1,33 @@
 :root {
-  --main-color: #f1f1f1;
-}
 
-@media (prefers-color-scheme: dark) {
-  :root {
+    --main-color: #f1f1f1;
     --color-black: #000;
     --color-pink: #fa96aa;
     --color-grey: #D9D9D9;
     --color-flat: #f7f0f2;
+    --color-white: #fff;
+    --color-shadow: #00000029;
+
+    --color-font-base : #000;
+    --color-background-base : #fff;
+
+    --main-gutter : 20px;
+    
+}
+
+@media (prefers-color-scheme: dark) {
+
+  :root {
+
+    --color-black: #000;
+    --color-pink: #fa96aa;
+    --color-grey: #D9D9D9;
+    --color-flat: #f7f0f2;
+    --color-white: #fff;
+    --color-shadow: #00000029;
+    --color-background-base : #fff;
+    --color-font-base : #000;
+    --main-gutter : 20px;
     
   }
 }
@@ -18,8 +38,18 @@
   padding : 0;
 }
 
+.p404 {
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+}
 .page {
+
   margin-top: 80px;
+  background-color: var(--color-background-base);
+
 }
 html {
   scroll-behavior: smooth;
