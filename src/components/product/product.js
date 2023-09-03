@@ -1,5 +1,6 @@
 import Image from 'next/image';
 import styles from './product.module.css';
+import productsStyles from '../products/products.module.css';
 import { FaCartPlus, FaMinus } from 'react-icons/fa';
 const PercentBox = ({ percent }) => {
 
@@ -14,7 +15,7 @@ const PercentBox = ({ percent }) => {
 const Product = ({product, addToBasket, removeFromBasket}) => {
 
     return (
-      <div className={styles.product}>
+      <div className={`${styles.product} `}>
      
         <div className={styles.header}>
 

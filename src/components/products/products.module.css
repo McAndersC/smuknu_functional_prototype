@@ -23,7 +23,9 @@
     gap: 30px;
     flex: 1;
 }
-
+.product {
+    width : 100%;
+}
 /*  
 
     Media Queries
@@ -34,5 +36,25 @@
     .list {
         flex-direction: row;
         flex-wrap: wrap;
+        width: 100%;
+    }
+
+    .product {
+        width : calc(50% -  30px);
+    }
+}
+
+@media (min-width: 1024px) {
+   
+    .product {
+        width : calc(33% -  30px);
+    }
+}
+
+@media (min-width: 1280px) {
+   
+
+    .product {
+        width : calc(25% -  30px);
     }
 }

@@ -9,7 +9,7 @@
     background-color: white;
     border-radius: 20px;
     height: 100%;
-
+    width: 100%;
     position: relative;
     box-shadow: 2px 2px 5px darkgray;
 }
@@ -120,26 +120,4 @@
     line-height: 12px;
     color: #fff;
     margin-left : 5px;
-}
-
-
-/*  
-
-    Media Queries
-
-*/
-
-@media (min-width: 728px) {
-    .product {
-      
-        width: calc(50% - 20px);
-    }
-}
-
-
-@media (min-width: 1024px) {
-    .product {
-      
-        width: calc(25%);
-    }
 }

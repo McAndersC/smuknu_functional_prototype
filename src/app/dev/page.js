@@ -48,17 +48,17 @@ export default function Dev() {
       <h1 onClick={() => setActive(!active)}>Produkter</h1>
 
       <div className={styles.products}>
-      {productData?.map((product) => (
-        <>
-        {/* <PrintData key={product._id} data={product}/> */}
-        <Product key={product._id} product={product} />
-        </>
+      {productData?.map((product, index) => (
+    
+
+        <Product key={index} product={product} /> 
+        
       ))}
         </div>
       
       <h1 className={`${'slim'} ${active ? 'active' : 'inactive'}`}>Questions</h1>
-      {questionsData?.map((question) => (
-        <PrintData key={question._id} data={question}/>
+      {questionsData?.map((question, index) => (
+        <PrintData key={index} data={question}/>
       ))}
 
       {active ? <div>Active</div> : <div>Inactive</div>}

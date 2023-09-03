@@ -46,22 +46,21 @@ const Products = ({headline, recommend}) => {
 
     const showAllProducts = () => {
 
-        return productData.length !== 0 ? productData.map((product, index) => <Product 
+        return productData.length !== 0 ? productData.map((product, index) => <div key={index} className={styles.product}><Product 
             key={index} 
             product={product} 
             addToBasket={addProductToBasket} 
             removeFromBasket={removeProductToBasket}>
-        </Product>) : null;
+        </Product></div>) : null;
 
     }
 
     const showRecommendedProducts = () => {
-        return productData.length !== 0 ? productData.filter((p) => p.recommended).map((product, index) => <Product 
-            key={index} 
+        return productData.length !== 0 ? productData.filter((p) => p.recommended).map((product, index) => <div key={index} className={styles.product}><Product 
             product={product} 
             addToBasket={addProductToBasket} 
             removeFromBasket={removeProductToBasket}>
-        </Product>) : null;
+        </Product></div>) : null;
     }
 
     useEffect(() => {
